@@ -200,11 +200,11 @@ header .header-content .header-content-inner img {
     position:relative;
     left:0;
     top:0;
-    -webkit-animation: fadein 6s; /* Safari, Chrome and Opera > 12.1 */
-       -moz-animation: fadein 6s; /* Firefox < 16 */
-        -ms-animation: fadein 6s; /* Internet Explorer */
-         -o-animation: fadein 6s; /* Opera < 12.1 */
-            animation: fadein 6s;
+    -webkit-animation: fadein 8s; /* Safari, Chrome and Opera > 12.1 */
+       -moz-animation: fadein 8s; /* Firefox < 16 */
+        -ms-animation: fadein 8s; /* Internet Explorer */
+         -o-animation: fadein 8s; /* Opera < 12.1 */
+            animation: fadein 8s;
 }
 
 @keyframes fadein {
@@ -505,6 +505,12 @@ img::selection {
 img::-moz-selection {
     color: #fff;
     background: 0 0;
+}
+
+#portfolio {
+    padding-top:20px;
+    background-color: #222;
+
 }
 
 body {

@@ -25,6 +25,9 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/creative.css" type="text/css">
 
+    <!-- filtr CSS -->
+    <link rel="stylesheet" href="css/filtr.css">
+
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -140,7 +143,50 @@
     </section>
 
     <section class="no-padding" id="portfolio">
-        <div class="container-fluid">
+        <div class="container">
+            <!-- Filter Controls - Simple Mode -->
+            <div class="row">
+                <!-- A basic setup of simple mode filter controls, all you have to do is use data-filter="all"
+                for an unfiltered gallery and then the values of your categories to filter between them -->
+                <ul class="simplefilter">
+                    <li class="active" data-filter="all">All</li>
+                    <li data-filter="1">Web/App Dev</li>
+                    <li data-filter="2">VR/AR Dev</li>
+                    <li data-filter="3">Hardware Dev</li>
+                    <li data-filter="4">Motion Graphics</li>                
+                </ul>
+            </div>
+
+            <div class="row">
+                <!-- This is the set up of a basic gallery, your items must have the categories they belong to in a data-category
+                attribute, which starts from the value 1 and goes up from there -->
+                <div class="filtr-container">
+                    <div class="col-xs-6 col-sm-4 filtr-item" data-category="3" data-sort="Busy streets">
+                        <img class="img-responsive" src="img/motionsensor.png" alt="sample image">
+                        <span class="item-desc">Motion-Sensing Light</span>
+                    </div>
+                    <div class="col-xs-6 col-sm-4 filtr-item" data-category="2, 4" data-sort="Luminous night">
+                        <img class="img-responsive" src="img/powerless.png" alt="sample image">
+                        <span class="item-desc">Powerless</span>
+                    </div>
+                    <div class="col-xs-6 col-sm-4 filtr-item" data-category="4" data-sort="City wonders">
+                        <img class="img-responsive" src="img/seeclickfix.png" alt="sample image">
+                        <span class="item-desc">SeeClickFix</span>
+                    </div>
+                    <div class="col-xs-6 col-sm-4 filtr-item" data-category="1, 3" data-sort="In production">
+                        <img class="img-responsive" src="img/picam.jpg" alt="sample image">
+                        <span class="item-desc">Smart Camera</span>
+                    </div>
+                    <div class="col-xs-6 col-sm-4 filtr-item" data-category="1" data-sort="Industrial site">
+                        <img class="img-responsive" src="img/bowlofnouns.png" alt="sample image" href='bfon2.html'>
+                        <span class="item-desc">Bowl of Nouns (V2)</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- <div class="container-fluid">
             <div class="row no-gutter">
                 <div class="col-lg-4 col-sm-6">
                     <a target="_blank" href="webdev.html" class="portfolio-box">
@@ -203,14 +249,14 @@
                     </a>
                 </div>
             </div>
-        </div>
+        </div> -->
     </section>
 
     <aside class="bg-dark">
         <div class="container text-center">
             <div class="call-to-action">
                 <h2>View github!</h2>
-                <a target="_blank" href="https://github.uconn.edu/arg11020" class="fa fa-github fa-3x wow tada"></a>
+                <a target="_blank" href="https://github.com/gizboslice" class="fa fa-github fa-3x wow tada"></a>
             </div>
         </div>
     </aside>
@@ -248,6 +294,19 @@
 
     <!-- Custom Theme JavaScript -->
     <script src="js/creative.js"></script>
+
+    <!-- Include jQuery & Filterizr -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="filterizr/jquery.filterizr.js"></script>
+    <script src="js/controls.js"></script>
+
+    <!-- Kick off Filterizr -->
+    <script type="text/javascript">
+        $(function() {
+            //Initialize filterizr with default options
+            $('.filtr-container').filterizr();
+        });
+    </script>
 
 </body>
 
